@@ -108,6 +108,8 @@ function view($key, $val) {
 }
 
 function current_user($user=null) {
+    view('is_registered', 1);
+
     if ($user instanceof User) {
         fSession::set('userid', $user->getId());
     }
@@ -130,6 +132,9 @@ function current_user($user=null) {
                     }
                 } catch (Exception $e) {
                     $user = copy_from_engi_site($email);
+
+                    if (empty($user)) { return $user; }
+
                     fAuthorization::setUserAuthLevel($user->getType());
                     current_user($user);
                     return $user;
@@ -148,9 +153,15 @@ function current_user($user=null) {
 
 function copy_from_engi_site($email) {
 
-    require_once "engilogin.php";
+    require_once "engiloginnew.php";
 
-    $engi_user = engi_user($email);
+    try {
+        $engi_user = engi_user($email);
+    } catch (UserNotRegisteredException $e) {
+        view('is_registered', false);
+        return false;
+    }
+
     $user = new User();
     $user->setEmail($email);
     $user->setName($engi_user['fullname']);

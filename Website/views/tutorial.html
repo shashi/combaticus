@@ -6,8 +6,9 @@
 <h2>Tutorial</h2>
 <h3>1. Create an account. <a href="http://engineer.org.in/register.php">Sign Up!</a>
 <h3>2. Download the starter package</h3>
-<a href="{{config.webroot}}/pacman-kk-v0.2.tar.gz">Click here to download the starter package.</a>(Latest Upload: 10:45am, 11th October, 2011)
-<h3>3. Executing Sample bots</h3>
+<a href="{{config.webroot}}/pacman-kk-v0.3.zip">Click here to download the starter package for Linux.</a>(version 0.3)(Latest Upload: 15:00hours, 14th October, 2011)<br><br>
+<a href="{{config.webroot}}/pacman-kk-windows-v0.1.tar.gz">Click here to download the starter package for Windows.</a>
+<h3>3. Executing Sample bots in Linux</h3>
 <ol type="1">
 <li>Open terminal. Change your current directory to starterpackage/kkgame.</li>
 <li>To execute the sample bots(aa and bb) run ./game map1.txt aa bb.<br/>
@@ -20,18 +21,25 @@
 	</ol>
 
 </ol>
-
-<h3>4. Testing your bot</h3>
+<h3>4.Executing the sample bots in Windows</h3>
+<ol type="1">
+<li>Open command prompt. Change the directory to starterpackage/kkgame.</li>
+<li>Run game.exe map1.txt aa bb</li>
+<li>Change the directory to starterpackage/viewer</li>
+<li>Run view.exe</li>
+<li>Open viewer.html file in Mozilla Firefox or Google Chrome.</li>
+</ol>
+<h3>5. Testing your bot in Linux</h3>
 <ol type='1'>
 <li>Make a folder containing your bot programs and the makefile. 
 	<ol type='a'>
 	<li>Name the makefile as "makefile".</li>
-	<li>The executable name should be same as bot name.</li>
-	<li>Name the folder same as executable name.</li>
-	<li>Compress the folder. Use zip,tar or tar.gz. The compressed file name should also be same as executable name.</li>
+	<li>The executable name should be "pacman".</li>
+	<li>Name the folder same as bot name.</li>
+	<li>Compress the folder. Use zip,tar or tar.gz. The compressed file name should also be same bot name.</li>
 	</ol>
 	
-	Example:Suppose your bot's name is "my_bot", then the makefile should create a executable called my_bot.
+	Example:Suppose your bot's name is "my_bot", then the makefile should create a executable called "pacman".
 	The folder and the compressed folder name should be my_bot and my_bot.zip respectively.</li>
 
 <li>Place the compressed folder inside starterpackage/kkgame.</li>
@@ -41,8 +49,18 @@
 
 	<br/>Example: Run ./game map1.txt my_bot aa</li>
 </ol>
-
-<h3>5. <a href="{{config.webroot}}/upload">Submit</a> your code.The last date to upload or change bot is  23:59hrs,29 October 2011.</h3>
-<h4>6. <a href="{{config.webroot}}/download">Click to go to download page</a></h4>
+<h3>6. Testing your bot in Windows</h3>
+<ol type='1'>
+<li>Make a folder containing your bot programs.
+<ol type='a'>
+<li>Name the folder with your bot name.</li>
+<li>Create an executable of your bot with the name "pacman" in this folder.</li>
+<li>Place the folder inside starterpackage/kkgame.</li>
+</ol>
+</li>
+<li>Follow the same instructions as executing sample bots. In step 4 replace one of the bots with your bot name<br>Example: game.exe map1.txt my_bot bb</li>
+</ol>
+<h3>7. <a href="{{config.webroot}}/upload">Submit</a> your code.The last date to upload or change bot is  23:59hrs,29 October 2011.</h3>
+<h4>8. <a href="{{config.webroot}}/download">Click to go to download page</a></h4>
 {% endblock %}
 

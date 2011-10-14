@@ -26,17 +26,17 @@ Languages accepted &mdash; Any language that can take input from standard input 
 	<ul>
 		<li><code>A, B, C, D</code> &mdash; the ghosts controlled by the player</li>
 		<li><code>a, b, c, d</code> &mdash; ghosts of the opponents</li>
-		<li><code>P</code> &mdash; pacman controlled by the player</li>
+		<li><code>P</code> &mdash; pacman controlled by the player/both pacmen coincide</li>
 		<li><code>p</code> &mdash; pacman of the opponent</li>
-		<li><code>Q</code> &mdash; player's pacman when it has eaten power pellet</li>
-		<li><code>q</code> &mdash; opponenet's pacman when it has eaten power pellet</li>
-		<li><code>S</code> &mdash; If both the pacmen coincide and player has eaten power pellet</li>
-		<li><code>s</code> &mdash; If both the pacmen coincide and opponent has eaten power pellet</li>
 		<li><code>e</code> &mdash; Pellet</li>
 		<li><code>E</code> &mdash; power pellet</li>
 		<li><code>W</code> &mdash; Wall</li>
 		<li><code>.</code> &mdash; eaten pellet</li>
 	</ul>
+<li>After the map, there are two integers, the first integer indicating the number of moves left
+where the player’s pacman can eat the ghosts and the second integer indicating the number
+of moves left where the opponent’s pacman can eat the ghosts after eating a power pellet.
+</li>
 </ul>
 
 <h3>Output format</h3>
@@ -48,6 +48,9 @@ Languages accepted &mdash; Any language that can take input from standard input 
 	<li><code>3</code> &mdash; left</li>
 	<li><code>4</code> &mdash; right</li>
 	</ul>
+<li>OUTPUT ERROR- output error is when the moves are not valid i.e either all the five moves
+are not specified or they are out of the given range [1-4]
+</li>
 </ul>
 
 <h3>Rules</h3>
@@ -57,12 +60,29 @@ Languages accepted &mdash; Any language that can take input from standard input 
 <li>The ghosts cannot cross over.</li>
 <li>The player who wins gets a bonus of 50 points</li>
 </ul>
+
+<h3>Game End</h3>
+The game ends in one of the following condition:
+<ul>
+<li>When one of the pacmen or both pacmen are eaten by any of the eight ghosts.</li>
+<li>After 1000 exectutions.</li>
+<li>When there is
+<ul>
+<li>Compile Error</li>
+<li>Run Time Error</li>
+<li>Time limit exceeded(Maximum valid time for each execution is 5 seconds)</li>
+<li>Output Error</li>
+</ul>
+</ul>
+
+</ul>
+
 <h3>Submission of code</h3>
 <ul>
-<li>A compressed folder (tar or zip) consisting of the player’s code and the makefile.</li>
+<li>A compressed folder (tar or zip) consisting of the player’s code and the makefile. The makefile should make a executable called "pacman".</li>
 <li>Folder name, the compressed folder name should be the same as the executable i.e the players bot’s name.</li>
 <li>The bot’s name should consist of only alphabets and should not exceed eight characters.</li>
 <li>For further information please refer the <a href="{{ config.webroot }}/tutorial">tutorials</a>.</li>
 </article>
-<p><a href="{{config.webroot}}/pacman-kk-v0.1.zip"><b>Download the starter package</b></a> (Latest Upload: 5pm, 9th October, 2011)</p>
+<p><a href="{{config.webroot}}/download"><b>Download the starter package</b></a></p>
 {% endblock %}

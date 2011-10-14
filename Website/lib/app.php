@@ -105,7 +105,7 @@ function logout() {
     fAuthorization::destroyUserInfo();
     fSession::set('userid', NULL);
 
-    header('Location: http://engineer.org.in/logout.php');
+    header('Location: http://engineer.org.in/logout.php?return_to=http://engineer.org.in/kodekombat/game');
     return 0;
 }
 

@@ -1,4 +1,6 @@
 *~
 config.php
 botfile/
+lib/constants.php
+error_log
 *.swp

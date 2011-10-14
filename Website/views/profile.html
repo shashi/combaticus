@@ -19,7 +19,9 @@
 	<h2>Bots</h2>
 	{% include "bots_table.html" %}
 
+    {% if current_user %}
 	<h2>Upload</h2>
 	{% include "upload_form.html" %}
+    {% endif %}
 {% endblock %}
 
